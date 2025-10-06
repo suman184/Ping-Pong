@@ -27,7 +27,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
+            engine.handle_event(event)    # Task - 2 : For Reset and Quit 
         engine.handle_input()
         engine.update()
         engine.render(SCREEN)
